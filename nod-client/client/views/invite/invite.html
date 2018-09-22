@@ -1,8 +1,7 @@
 <template name="invite">
 	{{#if Template.subscriptionsReady}}
 		{{#with invite}}
-			{{> invite_activity}}
-			{{> invite_when}}
+			{{> invite_item}}
 		{{/with}}
 	{{else}}
 		{{> loading}}

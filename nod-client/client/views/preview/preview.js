@@ -14,6 +14,7 @@ Template.preview.events({
 			activity: Session.get("invite_activity"),
 			when: Session.get("invite_when"),
 			where: Session.get("invite_where"),
+			friends: Session.get("invite_friends"),
 		});
 
 		if (res) {
