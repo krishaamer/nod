@@ -24,7 +24,7 @@ FlowRouter.route('/when', {
   },
 });
 
-FlowRouter.route('/', {
+FlowRouter.route('/location', {
   name: 'location', 
   title: 'Location', 
   action () {
