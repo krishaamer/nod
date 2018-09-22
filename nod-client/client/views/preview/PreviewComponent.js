@@ -17,8 +17,6 @@ class PreviewComponent extends React.Component {
 
   render() {
 
-    console.log(this.props);
-
     const invite = {
       activity: Session.get("invite_activity"),
       when: Session.get("invite_when"),

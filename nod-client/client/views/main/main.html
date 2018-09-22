@@ -16,6 +16,7 @@
 <template name="main">
 	<div class="ui text container">
 		<div class="ui basic segment h100vh">
+			{{> Template.dynamic template=header}}
 			<div class="ui segment h100percent">
 				{{> Template.dynamic template=content}}
 			</div>

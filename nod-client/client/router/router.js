@@ -2,10 +2,11 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 FlowRouter.route('/', {
   name: 'activity', 
-  title: 'Activity', 
+  title: 'New activity', 
   action () {
     
     this.render('layout', 'main', {
+      header: "header",
       content: "activity",
     });
 
@@ -18,6 +19,7 @@ FlowRouter.route('/when', {
   action () {
     
     this.render('layout', 'main', {
+      header: "header",
       content: "when",
     });
 
@@ -30,6 +32,7 @@ FlowRouter.route('/location', {
   action () {
     
     this.render('layout', 'main', {
+      header: "header",
       content: "location",
     });
 
@@ -42,6 +45,7 @@ FlowRouter.route('/friends', {
   action () {
     
     this.render('layout', 'main', {
+      header: "header",
       content: "friends",
     });
 
@@ -60,15 +64,29 @@ FlowRouter.route('/preview', {
   },
 });
 
-FlowRouter.route('/invitation', {
-  name: 'invitation', 
-  title: 'Invitation', 
+FlowRouter.route('/invite', {
+  name: 'invite', 
+  title: 'Invite', 
   action () {
     
     this.render('layout', 'main', {
-      content: "invitation",
+      content: "invite",
     });
 
+  },
+});
+
+FlowRouter.route('/invite/:slug', {
+  name: 'inviteSingle', 
+  title: 'Your Invite', 
+  action () {
+
+    this.render('layout', 'main', {
+      content: "invite",
+    });
+  },
+  waitOn (params) {
+    return [Meteor.subscribe('invites')];
   },
 });
 

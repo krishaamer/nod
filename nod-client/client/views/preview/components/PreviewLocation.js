@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
+import Loader from '../../loader/Loader.js';
 
 class PreviewLocation extends Component {
 
@@ -18,8 +19,7 @@ class PreviewLocation extends Component {
 		    );
   		}
 
-  		return (<div></div>);
-
+  		return (<Loader />);
   	}
 }
 
