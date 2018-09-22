@@ -11,18 +11,8 @@ class InviteComponent extends React.Component {
     this.state = {};
   }
 
-  componentDidMount () {
-
-  }
-
-  componentWillUnmount () {
-
-  }
-
   render() {
-    return (
-      <div>Plap</div>
-    );
+    return (<div></div>);
   }
 }
 

@@ -2,35 +2,56 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FriendsButton from './FriendsButton';
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 class FriendsComponent extends React.Component {
 
-  constructor (props: Props) {
+  constructor (props) {
 
-    super(props);
-    this.state = {};
+    super (props);
+    this.state = {
+      friends: [],
+    };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount () {
+  handleChange (selected) {
 
+    this.setState (state => ({
+      selected: selected._id,
+    }));
+
+    Session.set('invite_friends', selected._id);
+    FlowRouter.go('preview');
   }
 
-  componentWillUnmount () {
+  render () {
 
-  }
+    if (this.props.dataIsReady) {
+      return this.props.data.map((data, i) => {
+        return (
+          <FriendsButton 
+            key={i} 
+            data={data} 
+            i={i} 
+            onChange={this.handleChange}
+          />
+        );
+      });
+    }
 
-  render() {
-    return (
-      <div>Plap</div>
-    );
+    return (<div></div>);
+
   }
 }
 
-export default FriendsComponent = withTracker(({ id }) => {
+export default FriendsComponent = withTracker(() => {
 
-  const sub = Meteor.subscribe('activities');
+  const sub = Meteor.subscribe('friends');
   const dataIsReady = sub.ready();
-  const data = Intro.find({}, { reactive : true }).fetch();
+  const data = Friends.find({}, { reactive : true }).fetch();
 
   return {
     dataIsReady,

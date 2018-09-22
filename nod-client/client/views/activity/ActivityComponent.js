@@ -17,12 +17,13 @@ class ActivityComponent extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange (activity) {
+  handleChange (selected) {
 
     this.setState (state => ({
-      activity: activity._id,
+      selected: selected._id,
     }));
 
+    Session.set('invite_activity', selected._id);
     FlowRouter.go('when');
   }
 
