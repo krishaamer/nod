@@ -1,0 +1,11 @@
+.h100vh {
+	height: 100vh;
+}
+
+.h100percent {
+	height: 100%;
+}
+
+.m1 {
+	margin: 1rem !important;
+}
