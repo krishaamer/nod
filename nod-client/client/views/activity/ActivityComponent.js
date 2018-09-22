@@ -3,7 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class PreviewComponent extends React.Component {
+class ActivityComponent extends React.Component {
 
   constructor (props: Props) {
 
@@ -26,15 +26,15 @@ class PreviewComponent extends React.Component {
   }
 }
 
-export default PreviewComponent = withTracker(({ id }) => {
+export default ActivityComponent = withTracker(({ id }) => {
 
-  const sub = Meteor.subscribe('intro');
+  const sub = Meteor.subscribe('activities');
   const dataIsReady = sub.ready();
-  const data = Invites.find({ isPreview: true }, { reactive : true }).fetch();
+  const data = Activities.find({ isPreview: true }, { reactive : true }).fetch();
 
   return {
     dataIsReady,
     data,
   };
 
-})(PreviewComponent);
+})(ActivityComponent);

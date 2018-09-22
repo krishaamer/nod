@@ -28,9 +28,9 @@ class LocationComponent extends React.Component {
 
 export default LocationComponent = withTracker(({ id }) => {
 
-  const sub = Meteor.subscribe('intro');
+  const sub = Meteor.subscribe('activities');
   const dataIsReady = sub.ready();
-  const data = Intro.find({}, { reactive : true }).fetch();
+  const data = Activities.find({}, { reactive : true }).fetch();
 
   return {
     dataIsReady,
