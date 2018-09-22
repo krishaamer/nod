@@ -69,6 +69,7 @@ retry@1.1.0
 routepolicy@1.1.0-rc18.16
 semantic:ui@2.3.1
 semantic:ui-data@2.3.1
+session@1.1.8
 shell-server@0.4.0-rc18.16
 socket-stream-client@0.2.2
 spacebars@1.0.15
