@@ -2,7 +2,10 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PreviewLocation from './PreviewLocation';
+import PreviewActivity from './components/PreviewActivity';
+import PreviewLocation from './components/PreviewLocation';
+import PreviewWhen from './components/PreviewWhen';
+import PreviewFriends from './components/PreviewFriends';
 
 class PreviewComponent extends React.Component {
 
@@ -26,7 +29,10 @@ class PreviewComponent extends React.Component {
     return (
       <div className="ui center aligned basic segment">
         <h1>Invite!</h1>
-        <PreviewLocation id={Session.get("invite_location")} />
+        <PreviewActivity />
+        <PreviewLocation />
+        <PreviewWhen />
+        <PreviewFriends />
       </div>
     );
   }
