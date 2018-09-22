@@ -9,7 +9,7 @@
     "checkbox": true,
     "comment": true,
     "container": true,
-    "dimmer": true,
+    "dimmer": false,
     "divider": true,
     "dropdown": true,
     "embed": true,
