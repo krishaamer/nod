@@ -1,0 +1,15 @@
+<head>
+  <title>Nod</title>
+</head>
+
+<body></body>
+
+<template name="layout">
+	{{> yield}}
+</template>
+
+<template name="main">
+	<div class="ui fluid container">
+		{{> Template.dynamic template=content}}
+	</div>
+</template>
