@@ -3,6 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import WhenButton from './WhenButton';
+import Loader from '../loader/Loader.js';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 class WhenComponent extends React.Component {
@@ -42,7 +43,7 @@ class WhenComponent extends React.Component {
       });
     }
 
-    return (<div></div>);
+    return (<Loader />);
 
   }
 }

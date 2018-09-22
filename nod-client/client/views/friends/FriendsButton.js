@@ -12,6 +12,7 @@ class FriendsButton extends Component {
 
 		this.props.onChange({
 	      _id: this.props.data._id,
+	      phone: this.props.data.phone,
 	    });
 	}
   

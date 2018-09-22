@@ -3,6 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FriendsButton from './FriendsButton';
+import Loader from '../loader/Loader.js';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 class FriendsComponent extends React.Component {
@@ -24,6 +25,7 @@ class FriendsComponent extends React.Component {
     }));
 
     Session.set('invite_friends', selected._id);
+    Session.set('invite_friends_phone', selected.phone);
     FlowRouter.go('preview');
   }
 
@@ -42,7 +44,7 @@ class FriendsComponent extends React.Component {
       });
     }
 
-    return (<div></div>);
+    return (<Loader />);
 
   }
 }

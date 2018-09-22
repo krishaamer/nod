@@ -8,12 +8,10 @@ class Loader extends React.Component {
     return (
     	<div className="ui grid">
 			<div className="sixteen wide column">
-				<div className="ui basic segment elementToFadeInAndOut">
-					<div className="loaderContainer">
-						<p>
-							<i className="large notched circle loading icon"></i>
-						</p>
-					</div>
+				<div className="ui basic center aligned centered segment">
+					<p>
+						<i className="large notched pink circle loading icon"></i>
+					</p>
 				</div>
 			</div>
 		</div>

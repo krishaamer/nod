@@ -4,4 +4,10 @@
 	{{> invite_activity}}
 	{{> invite_when}}
 	{{> invite_location}}
+	{{#if send_sms_done}}
+		<div class="ui green message">
+			<div class="header">Success!</div>
+			<p>Your invitation SMS has also been sent</p>
+		</div>
+	{{/if}}
 </template>
