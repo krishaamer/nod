@@ -1,7 +1,11 @@
 <template name="invite">
 	{{#if Template.subscriptionsReady}}
 		{{#with invite}}
-			{{> invite_item}}
+			{{#if is_sending_flow}}
+				{{> invite_item_sender}}
+			{{else}}
+				{{> invite_item_receiver}}
+			{{/if}}
 		{{/with}}
 	{{else}}
 		{{> loading}}

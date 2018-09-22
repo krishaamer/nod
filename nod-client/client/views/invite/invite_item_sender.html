@@ -1,8 +1,6 @@
-<template name="invite_item">
+<template name="invite_item_sender">
 	<h1>Great!</h1>
-	{{#if is_sending_flow}}
-		<p>You sent a request to {{> invite_friends}}</p>
-	{{/if}}
+	<p>You sent a request to {{> invite_friends}}</p>
 	{{> invite_activity}}
 	{{> invite_when}}
 	{{> invite_location}}

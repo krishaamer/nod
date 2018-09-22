@@ -9,8 +9,17 @@ Template.invite.onCreated(() => {
 });
 
 Template.invite.helpers({
-  invite () {
+  	invite () {
 
-    return Invites.findOne({ _id: FlowRouter.getParam('slug') });
-  },
+    	return Invites.findOne({ _id: FlowRouter.getParam('slug') });
+  	},
+  	is_sending_flow () {
+
+		if (Session.get("invite_friends_phone")) {
+
+			return true;
+		}
+
+		return false;
+	},
 });
