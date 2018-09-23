@@ -3,19 +3,22 @@
 		<a href="/" class="item">Let's Do Something!</a>
 	</div>
 	<section>
-		<div class="ui center aligned basic segment">
+		<div class="ui center aligned basic very padded segment">
 			{{inviter_name}} is inviting you to
 			{{> invite_activity}}
 			{{> invite_when}}
 			at {{> invite_location}}
 		</div>
-		<div class="ui basic segment">
-			<div class="ui two column stackabled doubling grid">
+		<div class="ui basic inverted yellow segment">
+			<div class="ui three column stackabled doubling grid">
 				<div class="center aligned column">
-					<div class="ui massive green button">Accept</div>
+					<div class="ui large green button">Accept</div>
 				</div>
 				<div class="center aligned column">
-					<div class="ui massive red button">Deny</div>
+					<div class="ui large red button">Another time</div>
+				</div>
+				<div class="center aligned column">
+					<div class="ui large orange button">Forward to Friend</div>
 				</div>
 			</div>
 		</div>
