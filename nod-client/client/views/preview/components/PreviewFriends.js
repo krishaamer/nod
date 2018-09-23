@@ -14,9 +14,7 @@ class PreviewFriends extends Component {
   	render () {
 
   		if (this.props.data && this.props.data.name) {
-  			return (
-		    	<h3>{this.props.data.name}</h3>
-		    );
+  			return this.props.data.name;
   		}
 
   		return (<Loader />);

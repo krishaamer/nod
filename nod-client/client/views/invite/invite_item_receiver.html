@@ -1,6 +1,13 @@
 <template name="invite_item_receiver">
-	<h1>Let's Do Something!</h1>
-	{{> invite_activity}}
-	{{> invite_when}}
-	{{> invite_location}}
+	<div class="ui massive fluid inverted orange one item menu">
+		<a href="/" class="item">Let's Do Something!</a>
+	</div>
+	<section>
+		<div class="ui center aligned basic segment">
+			{{inviter_name}} is inviting you to
+			{{> invite_activity}}
+			{{> invite_when}}
+			at {{> invite_location}}
+		</div>
+	</section>
 </template>

@@ -16,7 +16,6 @@ Template.invite.helpers({
   	is_sending_flow () {
 
 		if (Session.get("invite_friends_phone")) {
-
 			return true;
 		}
 

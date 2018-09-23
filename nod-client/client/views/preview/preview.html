@@ -1,8 +1,13 @@
 <template name="preview">
 	<section>
-		<div>
-			{{> React component=PreviewComponent}}
+		<div class="ui center aligned basic segment">
+			<h2>{{> React component=PreviewFriends}}</h2>
+			<h2>{{> React component=PreviewActivity}}</h2>
+			<h2>{{> React component=PreviewWhen}}</h2>
+			<h2>{{> React component=PreviewLocation}}</h2>
 		</div>
-		<button class="ui orange button send-invite">Send</button>
+		<div class="ui center aligned basic segment">
+			<button class="ui orange circular segment m1 button send-invite">Nod</button>
+		</div>
 	</section>
 </template>

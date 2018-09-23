@@ -1,5 +1,5 @@
-Template.invite_location.onCreated(() => { 
-	
+Template.invite_location.onCreated(() => {
+
 	const self = Template.instance();
 	self.autorun(() => {
 		self.subscribe('locations');

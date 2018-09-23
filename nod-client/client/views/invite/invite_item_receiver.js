@@ -1,6 +1,6 @@
 Template.invite_item_receiver.helpers({
-  	plap () {
+  	inviter_name () {
 
-		return false;
+		return "Anita";
 	},
 });

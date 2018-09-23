@@ -1,9 +1,21 @@
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
-import PreviewComponent from './PreviewComponent.js';
+import PreviewActivity from './components/PreviewActivity';
+import PreviewLocation from './components/PreviewLocation';
+import PreviewWhen from './components/PreviewWhen';
+import PreviewFriends from './components/PreviewFriends';
 
 Template.preview.helpers({
-  PreviewComponent () {
-    return PreviewComponent;
+  PreviewActivity () {
+    return PreviewActivity;
+  },
+  PreviewLocation () {
+    return PreviewLocation;
+  },
+  PreviewWhen () {
+    return PreviewWhen;
+  },
+  PreviewFriends () {
+    return PreviewFriends;
   },
 })
 
@@ -13,7 +25,7 @@ Template.preview.events({
 		const res = Invites.insert({
 			activity: Session.get("invite_activity"),
 			when: Session.get("invite_when"),
-			where: Session.get("invite_where"),
+			location: Session.get("invite_location"),
 			friends: Session.get("invite_friends"),
 		});
 
