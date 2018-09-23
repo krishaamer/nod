@@ -52,7 +52,7 @@ export default WhenComponent = withTracker(() => {
 
   const sub = Meteor.subscribe('when');
   const dataIsReady = sub.ready();
-  const data = When.find({}, { reactive : true }).fetch();
+  const data = When.find({ featured: true }, { reactive : true }).fetch();
 
   return {
     dataIsReady,

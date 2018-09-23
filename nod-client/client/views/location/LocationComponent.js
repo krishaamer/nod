@@ -52,7 +52,7 @@ export default LocationComponent = withTracker(() => {
 
   const sub = Meteor.subscribe('locations');
   const dataIsReady = sub.ready();
-  const data = Locations.find({}, { reactive : true }).fetch();
+  const data = Locations.find({ featured: true }, { reactive : true }).fetch();
 
   return {
     dataIsReady,

@@ -21,6 +21,17 @@ Template.when_form.events({
 	'submit .when_form' (e) {
 
 		e.preventDefault();
-		FlowRouter.go('location');
+		const target = e.target;
+		const name = target.when_name.value;
+		const new_when_id = When.insert({
+			name: name,
+		});
+
+		if (new_when_id) {
+
+			Session.set('invite_when', new_when_id);
+    		FlowRouter.go('location');
+		}
+
 	},
 });

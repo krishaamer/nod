@@ -6,7 +6,19 @@ Activities.allow({
 });
 
 When = new Mongo.Collection('when');
+When.allow({
+  insert() { 
+  	return true;
+  },
+});
+
 Locations = new Mongo.Collection('locations');
+Locations.allow({
+  insert() { 
+  	return true;
+  },
+});
+
 People = new Mongo.Collection('people');
 Friends = new Mongo.Collection('friends');
 Relationships = new Mongo.Collection('relationships');
@@ -17,4 +29,3 @@ Invites.allow({
   	return true;
   },
 });
-
