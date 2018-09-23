@@ -15,7 +15,7 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/when', {
   name: 'when', 
-  title: 'When', 
+  title: 'New activity', 
   action () {
     
     this.render('layout', 'main', {
@@ -28,7 +28,7 @@ FlowRouter.route('/when', {
 
 FlowRouter.route('/location', {
   name: 'location', 
-  title: 'Location', 
+  title: 'New activity', 
   action () {
     
     this.render('layout', 'main', {
@@ -41,7 +41,7 @@ FlowRouter.route('/location', {
 
 FlowRouter.route('/friends', {
   name: 'friends', 
-  title: 'Friends', 
+  title: 'New activity', 
   action () {
     
     this.render('layout', 'main', {
@@ -58,6 +58,7 @@ FlowRouter.route('/preview', {
   action () {
     
     this.render('layout', 'main', {
+      header: "header",
       content: "preview",
     });
 
