@@ -25,6 +25,7 @@ class FriendsComponent extends React.Component {
     }));
 
     Session.set('invite_friends', selected._id);
+    Session.set('invite_friends_name', selected.name);
     Session.set('invite_friends_phone', selected.phone);
     FlowRouter.go('preview');
   }

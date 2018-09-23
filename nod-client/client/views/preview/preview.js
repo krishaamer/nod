@@ -29,7 +29,7 @@ Template.preview.events({
 			friends: Session.get("invite_friends"),
 		});
 
-		const message = Session.get("invite_friends") + ' invites you ' + Session.get("invite_activity");
+		const message = Session.get("invite_friends_name") + ' invites you ' + Session.get("invite_activity_name");
 
 		// Maybe add "Call them to make changes" button?
 
@@ -54,8 +54,8 @@ Template.preview.events({
 					}
 		    });
 
-			Session.set('invite_share_id', res);
-    		FlowRouter.go('/invite/' + res);
+			Session.set('invite_share_id', new_invite_id);
+    		FlowRouter.go('/invite/' + new_invite_id);
 		}
 	},
 });
