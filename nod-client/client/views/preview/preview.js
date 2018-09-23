@@ -29,7 +29,7 @@ Template.preview.events({
 			friends: Session.get("invite_friends"),
 		});
 
-		const message = Session.get("invite_friends_name") + ' invites you ' + Session.get("invite_activity_name");
+		const message = Session.get("my_name") + ' invites you ' + Session.get("invite_activity_name");
 
 		// Maybe add "Call them to make changes" button?
 

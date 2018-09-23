@@ -1,5 +1,6 @@
 Meteor.startup(() => {
 
+	Session.set('my_name', "Sandra");
 	Session.set('invite_activity', false);
 	Session.set('invite_activity_name', "");
 	Session.set('invite_when', false);
