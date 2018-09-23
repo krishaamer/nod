@@ -22,25 +22,27 @@ Template.preview.helpers({
 Template.preview.events({
 	'click .send-invite' () {
 
-		const res = Invites.insert({
+		const new_invite_id = Invites.insert({
 			activity: Session.get("invite_activity"),
 			when: Session.get("invite_when"),
 			location: Session.get("invite_location"),
 			friends: Session.get("invite_friends"),
 		});
 
+		const message = Session.get("invite_friends") + ' invites you ' + Session.get("invite_activity");
+
 		// Maybe add "Call them to make changes" button?
 
-		if (res) {
+		if (new_invite_id) {
 
 			// Send SMS
 			const recipient = Session.get("invite_friends_phone");
 	  		const domain = Meteor.settings["public"].ROOT_URL;
-	  		const share_url = domain + "invite/" + res;
+	  		const share_url = domain + "invite/" + new_invite_id;
 
 			Meteor.call('send-sms', {
 					'recipient': recipient,
-					'message': "Hi! Here's Your invite! " + share_url,
+					'message': 'Hi! ' + message + '! ' + share_url,
 				}, (err, res) => {
 
 					if (err) {
@@ -51,7 +53,6 @@ Template.preview.events({
 						Session.set("invite_share_sms_done", true);
 					}
 		    });
-
 
 			Session.set('invite_share_id', res);
     		FlowRouter.go('/invite/' + res);

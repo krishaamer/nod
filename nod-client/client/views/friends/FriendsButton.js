@@ -15,12 +15,26 @@ class FriendsButton extends Component {
 	      phone: this.props.data.phone,
 	    });
 	}
+
+	avatar () {
+
+		return 'https://api.adorable.io/avatars/285/' + this.props.i + '.png';
+	}
   
   	render () {
 	    return (
-	      <button key={this.props.i} onClick={this.handleClick} className='ui orange circular segment m1 button'>
-	        <span className="header">{this.props.data.name}</span>
-	      </button>
+	    	<tr key={this.props.i} onClick={this.handleClick}>
+          <td>
+            	<h2 className="ui image header">
+              	<img src={this.avatar()} className="ui avatar image" />
+            	</h2>
+          </td>
+          <td>
+          	<div className="ui header">
+          		{this.props.data.name}
+          	</div>
+          </td>
+        </tr>
 	    );
   	}
 }

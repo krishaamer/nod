@@ -3,8 +3,12 @@
 		<div class="ui center aligned basic segment">
 			<h1>With whom?</h1>
 		</div>
-		<div class="ui basic no-padding segment">
-			{{> React component=FriendsComponent}}
+		<div class="ui basic padded segment">
+			<table class="ui very basic selectable table">
+	            <tbody>
+					{{> React component=FriendsComponent}}
+				</tbody>
+          	</table>
 		</div>
 	</section>
 </template>

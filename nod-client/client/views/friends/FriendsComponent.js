@@ -44,7 +44,13 @@ class FriendsComponent extends React.Component {
       });
     }
 
-    return (<Loader />);
+    return (
+      <tr>
+        <td>
+          <Loader />
+        </td>
+      </tr>
+    );
 
   }
 }

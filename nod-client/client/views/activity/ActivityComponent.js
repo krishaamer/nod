@@ -52,7 +52,7 @@ export default ActivityComponent = withTracker(() => {
 
   const sub = Meteor.subscribe('activities');
   const dataIsReady = sub.ready();
-  const data = Activities.find({}, { reactive : true }).fetch();
+  const data = Activities.find({ featured: true }, { reactive: true }).fetch();
 
   return {
     dataIsReady,
