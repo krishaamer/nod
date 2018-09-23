@@ -1,9 +1,12 @@
 <template name="activity">
 	<section>
 		<div class="ui center aligned basic segment">
-			<h2>What do you want to do?</h2>
+			<h1>What do you want to do?</h1>
 		</div>
-		<div>
+		<div class="ui basic segment">
+			{{> activity_form}}
+		</div>
+		<div class="ui basic no-padding segment">
 			{{> React component=ActivityComponent}}
 		</div>
 	</section>

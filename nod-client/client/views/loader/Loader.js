@@ -10,7 +10,7 @@ class Loader extends React.Component {
 			<div className="sixteen wide column">
 				<div className="ui basic center aligned centered segment">
 					<p>
-						<i className="large notched pink circle loading icon"></i>
+						<i className="large notched orange circle loading icon"></i>
 					</p>
 				</div>
 			</div>

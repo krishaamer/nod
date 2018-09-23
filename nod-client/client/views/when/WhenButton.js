@@ -17,7 +17,7 @@ class WhenButton extends Component {
   
   	render () {
 	    return (
-	      <button key={this.props.i} onClick={this.handleClick} className='ui pink circular segment m1 button'>
+	      <button key={this.props.i} onClick={this.handleClick} className='ui orange circular segment m1 button'>
 	        <span className="header">{this.props.data.name}</span>
 	      </button>
 	    );

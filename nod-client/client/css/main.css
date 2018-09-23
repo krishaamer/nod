@@ -13,3 +13,16 @@
 .orange-text {
 	color: #f26202;
 }
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.ui.menu {
+	border-radius: 0 !important;
+}
+
+.ui.segment,
+.ui.orange.segment:not(.inverted) {
+	border: none !important;
+}

@@ -1,9 +1,12 @@
 <template name="location">
 	<section>
 		<div class="ui center aligned basic segment">
-			<h2>Where?</h2>
+			<h1>Where?</h1>
 		</div>
-		<div>
+		<div class="ui basic segment">
+			{{> location_form}}
+		</div>
+		<div class="ui basic no-padding segment">
 			{{> React component=LocationComponent}}
 		</div>
 	</section>
