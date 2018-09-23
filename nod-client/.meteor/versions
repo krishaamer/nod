@@ -40,6 +40,7 @@ launch-screen@1.1.1
 less@2.8.0-rc18.16
 livedata@1.0.18
 logging@1.1.20
+mdg:seo@3.2.0_1
 meteor@1.9.2
 meteor-base@1.4.0
 minifier-css@1.4.0-rc18.16
