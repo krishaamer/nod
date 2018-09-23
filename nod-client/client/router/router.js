@@ -151,6 +151,39 @@ FlowRouter.route('/invite/:slug', {
   },
 });
 
+FlowRouter.route('/invite/:slug/accept', {
+  name: 'inviteForward', 
+  title: 'Accept Invite', 
+  action () {
+
+    this.render('layout', 'main', {
+      content: "invite_item_receiver_accept",
+    });
+  },
+});
+
+FlowRouter.route('/invite/:slug/deny', {
+  name: 'inviteForward', 
+  title: 'Another time...', 
+  action () {
+
+    this.render('layout', 'main', {
+      content: "invite_item_receiver_deny",
+    });
+  },
+});
+
+FlowRouter.route('/invite/:slug/forward', {
+  name: 'inviteForward', 
+  title: 'Forward Invite', 
+  action () {
+
+    this.render('layout', 'main', {
+      content: "invite_item_receiver_forward",
+    });
+  },
+});
+
 import { FlowRouterMeta, FlowRouterTitle } from 'meteor/ostrio:flow-router-meta';
 new FlowRouterMeta(FlowRouter);
 new FlowRouterTitle(FlowRouter);
