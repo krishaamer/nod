@@ -27,6 +27,8 @@ Template.activity_form.events({
 			name: name,
 		});
 
+		Session.set('invite_activity_name', name);
+
 		if (new_activity_id) {
 
 			Session.set('invite_activity', new_activity_id);

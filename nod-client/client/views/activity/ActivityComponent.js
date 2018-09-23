@@ -25,7 +25,6 @@ class ActivityComponent extends React.Component {
     }));
 
     Session.set('invite_activity', selected._id);
-    Session.set('invite_activity_name', selected.name);
     FlowRouter.go('when');
   }
 

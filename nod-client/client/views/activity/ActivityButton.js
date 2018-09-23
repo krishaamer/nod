@@ -12,7 +12,6 @@ class ActivityButton extends Component {
 
 		this.props.onChange({
 	      _id: this.props.data._id,
-	      name: this.props.data.name,
 	    });
 	}
   
